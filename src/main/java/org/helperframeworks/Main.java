@@ -11,14 +11,23 @@ public class Main {
     public static void main(String[] args){
         System.out.println("Eric Loflin");
 
-        TaskProcessor taskProcessor = new TaskProcessor(16, 500);
+        final int threads = 16;
 
-        taskProcessor.start();
+        TaskProcessor[] taskProcessor = new TaskProcessor[threads];
 
+        for(int i = 0 ; i < threads; i++){
 
-        while(1==1){
+            taskProcessor[i] = new TaskProcessor(1, 500);
+            taskProcessor[i].start();
 
         }
+
+        String ans = "no";
+        do
+        {
+            //System.out.printf("Are you done? [yes] [no] : ");
+            //ans = System.console().readLine();
+        }while(ans != "yes");
 
     }
 }

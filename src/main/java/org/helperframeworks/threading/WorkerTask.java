@@ -40,7 +40,7 @@ public class WorkerTask implements Runnable  {
 
 
             try {
-                System.out.println("Thread " + Thread.currentThread().getId() + " is about to sleep." + LocalDateTime.now());
+               // System.out.println("Thread " + Thread.currentThread().getId() + " is about to sleep." + LocalDateTime.now());
                 Thread.sleep(1000l);
             } catch (InterruptedException e) {
                 e.printStackTrace();
